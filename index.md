@@ -5,15 +5,17 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-So what I am doing is a making faces. The faces that I am goign to use are Shocked, Smiley , sad and shocked face. I thought this would be good because 
-it is nice to look at all the faces changing. 
+# **Project**
+## **Eoin Fitzpatrick**
+## **Group B** 
+
+
+I am creating different facial expressions, including shocked, smiley, sad, and shocked faces. I think this will be visually appealing, as it's nice to watch the faces change.
 
 
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
-
 
 <img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSum.png">
 
@@ -53,6 +55,7 @@ This is my state machine the way it works is by cycles through four states in a 
 
 
 Then simply for the for the sad face and the happy face it was a sake of cutting the shock mouth in half so for the sad face what I did was using this code.
+This code is checking if a pixel is inside a circular area to create the bottom half of a shocked mouth expression. It uses the formula for a circle to determine if the pixel is defined by its row and column lies within a circle with a radius of 40 and centered at 300, 320. If the pixel is in the upper half of the circle where row <= 300.
 
 
 ![image](https://github.com/user-attachments/assets/4385068a-e967-49f5-85e8-f39287ffc40c)
@@ -62,9 +65,12 @@ To move it to make it look more like a sad face I moved the rows down. So it mad
 
 
 
-This is my smiley face. 
+This is my smiley face and 
+This code is creating the bottom half of a shocked mouth. It checks if a pixel is inside a circular area with a radius of 40, centered at 300, 320. If the pixel is in the lower half of the circle where row >= 300, it sets the color to black.
 
-![image](https://github.com/user-attachments/assets/e82134f5-c01a-479e-98d0-a6ba657bb0af)
+ ![image](https://github.com/user-attachments/assets/ff0183cb-c34a-4ba9-bbb6-0f654fcd215e)
+
+
 
 As you can see in this code that the arcs are just going opposite ways. and instead of going - 320 its goign == 320 so that the arc goes the other way. 
 
@@ -90,19 +96,25 @@ Here you can see a muxer and a counter clock working.
 
 ![image](https://github.com/user-attachments/assets/11bf292d-6d95-4d18-ae12-977f088d5ccb)
 
-Here you can see an Adder and a and gate working to create the image. This shows the amount of background work that has to go in for hardware for not a large amount of code which i find very Interesting 
+Here you can see an Adder and a and gate working to create the image. This shows the amount of background work that has to go in for hardware for not a large amount of code which I find very Interesting 
 
 
 
 ### **Synthesis**
-Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
+Synthesis in Vivado takes your design, written in a language like Verilog or VHDL, and turns it into a list of logic gates and components that an FPGA can use. It checks your code, makes it more efficient, and prepares it for the next steps in programming the FPGA. 
 
 ![image](https://github.com/user-attachments/assets/e117b58f-d1e0-4747-b91a-664e450cb6c5)
 
-This image shows how the design is mapped onto the FPGA after implementation in Vivado. The colored blocks represent different parts of the FPGA, like logic units or memory, and the lines show how they are connected. This view helps you see if the design fits well on the FPGA and how resources are being used. This is interesting because When I looked at the schematic for this 
+This image shows how the design is mapped onto the FPGA after implementation in Vivado. The colored blocks represent different parts of the FPGA, like logic units or memory, and the lines show how they are connected. This view helps you see if the design fits well on the FPGA and how resources are being used. This is interesting because When I looked at the schematic for this it was very large and confusing with the amount lines goign through things this picture makes it alot easier to inderstand what is going on in the synthesis. 
 
 ### **Demonstration**
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
+These are the faces. So what happens is starts on the next one and depending on the clock cycle it will move to the next image. 
+
+![IMG_1694](https://github.com/user-attachments/assets/ddf32adc-10ac-4466-bde1-a4094a56494c)
+![IMG_1695](https://github.com/user-attachments/assets/0b264119-fce7-482a-9143-09ebbb4fe7c9)
+![IMG_1696](https://github.com/user-attachments/assets/ecbfd63f-d525-495c-82f9-59bb82c6fd5a)
+![IMG_1693](https://github.com/user-attachments/assets/35c30334-c6de-4dac-b5f3-75426c4446c2)
+
 
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
