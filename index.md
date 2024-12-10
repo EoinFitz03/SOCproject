@@ -58,7 +58,7 @@ Then simply for the for the sad face and the happy face it was a sake of cutting
 ![image](https://github.com/user-attachments/assets/4385068a-e967-49f5-85e8-f39287ffc40c)
 
 
-To move it to make it look more like a sad face I moved the rows down.
+To move it to make it look more like a sad face I moved the rows down. So it made it a bit more realistic being a sad face.
 
 
 
@@ -72,8 +72,35 @@ As you can see in this code that the arcs are just going opposite ways. and inst
 
 ### **Simulation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
+
+![image](https://github.com/user-attachments/assets/bd087f62-75a4-4963-a149-9d51d8d3c9f1)
+
+
+Simulation in Vivado tests your design by running it in a virtual environment before programming the FPGA. It checks how your code behaves with different inputs and ensures the logic works as expected, helping you find and fix errors early. It also gives out a graph like this that shows you when certain parts are high and low like the clock and the colours that are in the VGA. 
+
+This is an image of what is hppening in a schematic and what is being used to produce the smiley faces. 
+
+
+![image](https://github.com/user-attachments/assets/87b7cbea-eb12-442d-9ee4-7249985be41d)
+
+You can see alot of things going on here but as you move in it makes more sense. 
+![image](https://github.com/user-attachments/assets/95231cf8-cb13-4441-b642-8c636c93a107)
+
+Here you can see a muxer and a counter clock working. 
+
+![image](https://github.com/user-attachments/assets/11bf292d-6d95-4d18-ae12-977f088d5ccb)
+
+Here you can see an Adder and a and gate working to create the image. This shows the amount of background work that has to go in for hardware for not a large amount of code which i find very Interesting 
+
+
+
 ### **Synthesis**
 Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
+
+![image](https://github.com/user-attachments/assets/e117b58f-d1e0-4747-b91a-664e450cb6c5)
+
+This image shows how the design is mapped onto the FPGA after implementation in Vivado. The colored blocks represent different parts of the FPGA, like logic units or memory, and the lines show how they are connected. This view helps you see if the design fits well on the FPGA and how resources are being used. This is interesting because When I looked at the schematic for this 
+
 ### **Demonstration**
 If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
 
@@ -93,42 +120,4 @@ A bullet list can be rendered as follows:
 
 Images can be added by uploading them to the repository in a /docs/assets/images folder, and then rendering using HTML via githubusercontent.com as shown in the example below.
 
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSrcs.png">
-
-
-
-
-
-
-
-
-
-
-
-This is a picture of my test bench as I simulated the VGA Colour Stripes. In this the rows and columns are taccing track of the picture 
-
-<img src= https://github.com/EoinFitz03/SOCproject/blob/main/image.png>
-
-
-This is a picture of my VGA top for the stripes. As you can see I had to call the colour stripes 
-![image](https://github.com/user-attachments/assets/df084a9e-ee8c-4773-8cd4-a22ecb74ff15)
-
-
-# **Faces**
-For my actual projct I decided to do faces. The way it works is starts of with a normal face so just straigt line for the mouth. 
-Then using the state machine it switches to a sad face then to a smiley face and finally to a shocked face. 
-## **State machine**
-![image](https://github.com/user-attachments/assets/5e3ca55e-ed3f-4a95-a898-9d677d3ee5a3)
-
-This is my state machine the way it works is by cycles through four states in a loop. Each state represents a different face normal, shocked, smiley, and sad. When the state changes, it updates to the next face in the sequence, going back to the first face after the last one. The case statement defines the order of transitions.
-
-![image](https://github.com/user-attachments/assets/7de1f6f3-2df9-4447-92a4-518fedd08eea)
-This is my Shocked face. In this code you can see I have made 3 full circles for eyes and mouth 
-
-
-## **Formula used to make circles for eyes mouth and faces**
-![image](https://github.com/user-attachments/assets/98903bd5-8f29-4296-85dc-861f125fa60a)
-![image](https://github.com/user-attachments/assets/e652a4e4-9894-4138-8533-6bcc0bb08617)
-
-
-This formula checks if each pixel on the screen lies inside or on the edge of a circle. The center of the circle is at (240, 320), and it has a radius of 120. If a pixel satisfies this condition, it is colored yellow, creating a circular face on the display. 
+<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSrcs.png"> 
