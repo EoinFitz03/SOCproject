@@ -119,3 +119,12 @@ Happy face
 Shocked face or the ohhhh face 
 ![IMG_1693](https://github.com/user-attachments/assets/35c30334-c6de-4dac-b5f3-75426c4446c2)
 Sad face 
+
+### **Conclusion **
+This FPGA VGA Driver project has been a great learning experience in using Verilog to create visual displays. The project that I created focused on creating different facial expressions normal, sad, smiley, and shocked that change on the screen using a state machine. By using simple circle-based formulas, I was able to create faces that transition from one expression to another.
+
+Throughout the project, I learned a lot about how to test and use designs in Vivado, and how to translate the design into hardware on the FPGA. Working with components like counters, multiplexers, and logic gates helped me understand how everything came together to create a working project.
+
+One thing that I founf most difficult in the project was trying to get teh sad face correct. Eventually I got there but this made me learn more about the code and it works when I ran into to problems like this so it was actually beneficial. 
+
+Overall, this project was a valuable experience that thought me a lot about FPGA design, and Hopefully the skills that I learned doing this project will help me in the furure.
