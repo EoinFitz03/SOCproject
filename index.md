@@ -33,15 +33,16 @@ This is a picture of my test bench as I simulated the VGA Colour Stripes.
 This is me running the simulation. 
 
 ### **Synthesis**
-Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
-In Vivado, synthesis translates your high-level HDL code into a low-level netlist of logic gates and connections. Implementation takes the netlist and maps it to the physical resources of the FPGA, optimizing placement and routing to meet timing and area requirements. 
+ ![thumbnail_image](https://github.com/user-attachments/assets/11eb8677-9ef0-455a-8794-ebe00249ac00)
+Synthesis in Vivado converts your HDL design into a hardware implementation that the FPGA can use. It translates your code into a netlist, which represents the design as logic gates, flip-flops, and connections, and optimizes it for speed, size, or power. This step prepares your design for placement and routing on the FPGA hardware.
+
+So For my synthesis for my Colour stripes sythesis it is not as visually appealing as the faces but as you can see from the picture above it is only stripes going through a page so my sythesis looks better for my faces because there is more going on in the code. I show it better in my synthesis fir my faces. It makes more sense and it more appealing what is going on.  
+
 
 # **My VGA Design Edit**
 
 ## **Faces**
-For my actual projct I decided to do faces. The way it works is starts of with a normal face so just straigt line for the mouth. 
-Then using the state machine it switches to a sad face then to a smiley face and finally to a shocked face. What gave me inspiration for this project was 
-I looked up on youtube cool designs for VGA. A face came up which gave me the idea of doing faces. I then googles more and got a template smiley face code of stackoverflow.
+My project focuses on creating faces displayed on a VGA screen that change using a state machine. It starts with a neutral face a straight line for the mouth transitions to a sad face, then a smiley face, and finally a shocked face. I was inspired by YouTube videos showing creative VGA designs. One video featured a face, which sparked the idea for this project, and I found a smiley face template code on Stack Overflow to help me get started. 
 
 I then got the circles formula from that code. This formula checks if each pixel on the screen lies inside or on the edge of a circle. From this formula then I could do the eyes and mouth by purely using circles. 
 ![image](https://github.com/user-attachments/assets/98903bd5-8f29-4296-85dc-861f125fa60a)
