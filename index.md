@@ -1,6 +1,6 @@
 ---
-layout: home
-title: FPGA VGA Driver Project
+layout: Home
+title: Faces FPGA VGA Driver Project
 tags: fpga vga verilog
 categories: Project
 ---
@@ -53,6 +53,12 @@ I then got the circles formula from that code. This formula checks if each pixel
 
 This is my state machine the way it works is by cycles through four states in a loop. Each state represents a different face normal, shocked, smiley, and sad. When the state changes, it updates to the next face in the sequence, going back to the first face after the last one. The case statement defines the order of transitions. As I go down the code the you will see the formula above coming up alot. For this shocked face I use 3 circles. The hard part of this was trying to get the vircles in the right places but I figured that for the mouth especially to have it around the 300 mark which is close to the middle for the rows and columns. 
 ![image](https://github.com/user-attachments/assets/626a29c4-71a6-47ed-9089-186361ad8272)
+
+reg [COUNTER_WIDTH-1:0] counter;
+
+declares a register called counter with a width defined by the COUNTER_WIDTH parameter. The register is used to count clock cycles and control the timing of state transitions in the state machine. The width of the counter is determined by the COUNTER_WIDTH parameter, which defaults to 32 bits in my project.
+
+This counter is used to keep track of the timing between different states. When the counter reaches the value defined by COUNT_TO, it triggers a state change, resetting the counter to 0. The counter helps ensure that the state transitions happen at the correct time and a the corrct intervals so everything works correctly.
 
 
 Then simply for the for the sad face and the happy face it was a sake of cutting the shock mouth in half so for the sad face what I did was using this code.
