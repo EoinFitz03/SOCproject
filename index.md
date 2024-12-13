@@ -2,7 +2,7 @@
 layout: home
 title: FPGA VGA Driver Project
 tags: fpga vga verilog
-categories: demo
+categories: Project
 ---
 
 # **Project**
@@ -109,28 +109,13 @@ Synthesis in Vivado takes your design, written in a language like Verilog or VHD
 This image shows how the design is mapped onto the FPGA after implementation in Vivado. The colored blocks represent different parts of the FPGA, like logic units or memory, and the lines show how they are connected. This view helps you see if the design fits well on the FPGA and how resources are being used. This is interesting because When I looked at the schematic for this it was very large and confusing with the amount lines goign through things this picture makes it alot easier to inderstand what is going on in the synthesis. 
 
 ### **Demonstration**
-These are the faces. So what happens is starts on the next one and depending on the clock cycle it will move to the next image. 
+These are the faces. So what happens is starts on the next one and depending on the clock cycle it will move to the next state. 
 
 ![IMG_1694](https://github.com/user-attachments/assets/ddf32adc-10ac-4466-bde1-a4094a56494c)
+Normal face 
 ![IMG_1695](https://github.com/user-attachments/assets/0b264119-fce7-482a-9143-09ebbb4fe7c9)
+Happy face
 ![IMG_1696](https://github.com/user-attachments/assets/ecbfd63f-d525-495c-82f9-59bb82c6fd5a)
+Shocked face or the ohhhh face 
 ![IMG_1693](https://github.com/user-attachments/assets/35c30334-c6de-4dac-b5f3-75426c4446c2)
-
-
-## **More Markdown Basics**
-This is a paragraph. Add an empty line to start a new paragraph.
-
-Font can be emphasised as *Italic* or **Bold**.
-
-Code can be highlighted by using `backticks`.
-
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-A bullet list can be rendered as follows:
-- vectors
-- algorithms
-- iterators
-
-Images can be added by uploading them to the repository in a /docs/assets/images folder, and then rendering using HTML via githubusercontent.com as shown in the example below.
-
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSrcs.png"> 
+Sad face 
